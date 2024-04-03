@@ -1,0 +1,14 @@
+version: '3'
+services:
+  airflow-webserver:
+    build: .
+    image: apache/airflow:latest
+    volumes:
+      - ./airflow:/opt/airflow
+     #- ./dags:/opt/airflow/dags
+      - ./downloads:/opt/airflow/downloads
+    ports:
+      - "9090:8080"  # Host port 9090 mapped to container port 8081
+    environment:
+      - AIRFLOW__WEBSERVER__PORT=8080  # Configure Airflow to use port 8081
+    command: airflow standalone
