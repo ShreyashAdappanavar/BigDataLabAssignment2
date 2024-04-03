@@ -1,0 +1,13 @@
+[2024-03-10T06:31:03.593+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: task1_v5.extract_file_links manual__2024-03-10T06:29:58.679350+00:00 [queued]>
+[2024-03-10T06:31:03.629+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: task1_v5.extract_file_links manual__2024-03-10T06:29:58.679350+00:00 [queued]>
+[2024-03-10T06:31:03.631+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-03-10T06:31:03.845+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): extract_file_links> on 2024-03-10 06:29:58.679350+00:00
+[2024-03-10T06:31:03.869+0000] {standard_task_runner.py:60} INFO - Started process 124 to run task
+[2024-03-10T06:31:03.875+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'task1_v5', 'extract_file_links', 'manual__2024-03-10T06:29:58.679350+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/task1_v5.py', '--cfg-path', '/tmp/tmpr9rd3q9c']
+[2024-03-10T06:31:04.107+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask extract_file_links
+[2024-03-10T06:31:04.771+0000] {task_command.py:423} INFO - Running <TaskInstance: task1_v5.extract_file_links manual__2024-03-10T06:29:58.679350+00:00 [running]> on host 4dfa689a22dd
+[2024-03-10T06:31:05.426+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='task1_v5' AIRFLOW_CTX_TASK_ID='extract_file_links' AIRFLOW_CTX_EXECUTION_DATE='2024-03-10T06:29:58.679350+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-10T06:29:58.679350+00:00'
+[2024-03-10T06:31:14.378+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-03-10T06:31:14.394+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=task1_v5, task_id=extract_file_links, execution_date=20240310T062958, start_date=20240310T063103, end_date=20240310T063114
+[2024-03-10T06:31:14.876+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-10T06:31:14.912+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
